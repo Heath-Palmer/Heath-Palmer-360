@@ -17,7 +17,8 @@ function myHTMLInclude() {
           z[i].parentNode.replaceChild(a, z[i]);
           myHTMLInclude();
         }
-      }      
+      }     
+      
       xhttp.open("GET", file, true);
       xhttp.send();
       return;
