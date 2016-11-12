@@ -20,13 +20,13 @@
 <style>
       .intro-overlay {
         z-index: 1;
-        position: absolute;
+        position:fixed;
         top: 0%;
         left: 0%;
         max-width: 15%;
         box-sizing: border-box;
         padding: 1em;
-        opacity: 0.4;
+        opacity:0.4;        
 
         color: #FFF;
         background: #222;
@@ -34,11 +34,11 @@
       }
         
       .menu-overlay {
-         z-index: 99999;
+        z-index: 1;
         position: fixed; 
-        top: 1%;
-        right: 1%;
-        box-sizing: border-box;
+        top: 0%;
+        right: 0%;
+        box-sizing:content-box;
         padding: 1em;
         width: 10%;
         height: 10%;
@@ -48,8 +48,7 @@
         background: rgba(0, 0, 0, 0.5) url(http://www.mrfencer.co.nz/edit/image_cache/icon_menu_960x5000c0.png) center no-repeat;
         font-family: Source Sans Pro, Helvetica Neue, Helvetica, Arial, sans-serif; 
       }
-
-    </style>
+</style>
        
     
     </head>
@@ -58,9 +57,7 @@
   
         <a-scene>
             <a-assets>
-                <img id="image" crossorigin="" src="https://ucarecdn.com/c87b5ff9-95cc-4fc1-a1ef-bdc74abc20d0/R00100501_xmp.JPG">
-                <!--<img id="image2" crossorigin="" src="https://ucarecdn.com/2592be7c-a171-4fe3-83b7-3cae17d73342/R00100391_xmp.JPG">-->
-                <!--<img id="image2" crossorigin="" src="images\R0010050[1]_xmp.jpg">-->
+                <img id="image" crossorigin="" src="https://ucarecdn.com/ca8bae80-2c2d-4681-9989-7f92b1b2cc49/360_0076_Stitch_XHC.JPG">
                 <a><img id="texture" crossorigin="" src="https://ucarecdn.com/eaee168b-c0b4-4cfa-b0c3-f1232c8d9a47/ucimg.png"></a>
                 <a><img id="texture2" crossorigin ="" src = "https://ucarecdn.com/b87450f7-f058-428a-8295-f847a0c02fea/bearcats.jpg"></a>
                 
@@ -82,26 +79,22 @@
                 <a-event name="mouseleave" scale="2 0.5 3"></a-event>
                 <a-animation attribute="rotation" begin="click" to="0 360 0"></a-animation>
             </a-box>
-            <a-entity>            
+            <!--<a-entity>            
                 <a-image look-at="#camera" src="https://ucarecdn.com/eaee168b-c0b4-4cfa-b0c3-f1232c8d9a47/ucimg.png" width = "5" height="3" position="0 -3 0">
                 </a-image>
-            </a-entity>  
+            </a-entity>-->  
             <!-- JavaScript Bloc Resources -->
             <div id="bloc" class="intro-overlay">
                 <!--<p>Welcome to Zimmer Auditorium</p>
                 <p>Check out each UC engineering building!</p>-->
                 <!--<div><a onclick="changeImage()" class="btn btn-success" >Next</a></div>-->
                 <div><a onclick="hide()" href = "buildings.html" class="btn btn-success">Buildings</a></div>
+                <a onclick="hide()" href = "360view.html" class="btn btn-success">Next</a></div>
             </div>
             
 
-            
-          
-            <a-sky radius="10000" src="#image" rotation = "0 0 0" position="0 0 0"></a-sky>
+            <a-sky radius="10" src="#image" rotation = "0 0 0" position="0 0 0"></a-sky>
             <a-entity light="color:#fff;type:ambient" data-aframe-default-light=""></a-entity>
-            <!--<a-entity id="audio" geometry="primitive: plane" material="color: blue"
-          position="-10 0 0" sound="src: RockeyThemesong.mp3; autoplay: true"></a-entity>                            
-        </a-scene>-->
 
          
     </body>
