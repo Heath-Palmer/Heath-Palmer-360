@@ -1,0 +1,37 @@
+<!doctype HTML>
+<html>
+    <head>
+        <title>Meet the Team</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta charset="utf-8">
+        <meta name="description" content="The Team — A-Frame">
+        <script src = "script.js"></script>
+        <script src="https://aframe.io/releases/0.2.0/aframe.js"></script>
+        <script src="aframe.min.js"></script>
+
+    </style>
+    
+    </head>
+    
+    <body>
+  
+        <a-scene>
+            
+            <a-assets>
+                <img id="image" crossorigin="" src="https://ucarecdn.com/9721358d-9374-4d11-8117-ec1914a0ec4d/SAM_101_1686.jpg">
+            </a-assets>
+            
+            <a-entity>
+              <a-camera id="camera" look-control= "" mouse-cursor= "">
+              <a-cursor color="#4CC3D9"></a-cursor>
+              </a-camera>
+            </a-entity>   
+
+            <a-sky radius="10000" src="#image" rotation = "0 0 0" position="0 0 0"></a-sky>
+            <a-entity light="color:#fff;type:ambient" data-aframe-default-light=""></a-entity>
+         
+        </a-scene>
+
+    </body>
+        
+</html>
